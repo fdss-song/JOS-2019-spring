@@ -1,0 +1,57 @@
+*** Now run 'make gdb'.
+***
+6828 decimal is 015254 octal!
+pading space in the right to number 22: 22       .
+chnum1: 29 chnum2: 30
+
+error! writing through NULL pointer! (%n argument)
+
+warning! The value %n argument pointed to has been overflowed!
+chnum1: -1
+show me the sign: +1024, -1024
+entering test_backtrace 5
+entering test_backtrace 4
+entering test_backtrace 3
+entering test_backtrace 2
+entering test_backtrace 1
+entering test_backtrace 0
+Stack backtrace:
+  eip f0100078  ebp f0110df8  args 00000000 00000000 00000000 f010004a f0112308
+         kern/init.c:18 test_backtrace+56
+  eip f01000a1  ebp f0110e18  args 00000000 00000001 f0110e58 f010004a f0112308
+         kern/init.c:16 test_backtrace+97
+  eip f01000a1  ebp f0110e38  args 00000001 00000002 f0110e78 f010004a f0112308
+         kern/init.c:16 test_backtrace+97
+  eip f01000a1  ebp f0110e58  args 00000002 00000003 f0110e98 f010004a f0112308
+         kern/init.c:16 test_backtrace+97
+  eip f01000a1  ebp f0110e78  args 00000003 00000004 f0110ea8 f010004a f0112308
+         kern/init.c:16 test_backtrace+97
+  eip f01000a1  ebp f0110e98  args 00000004 00000005 f0110ff8 f010004a f0112308
+         kern/init.c:16 test_backtrace+97
+  eip f01001b8  ebp f0110eb8  args 00000005 00000400 fffffc00 00000000 00000000
+         kern/init.c:48 i386_init+274
+  eip f010003e  ebp f0110ff8  args 00000003 00001003 00002003 00003003 00004003
+         kern/entry.S:83 <unknown>+0
+old rip: f0100ba8
+                                                   0
+         0
+new rip: f0100a34
+                                                                                                                                                                       0
+warning! The value %n argument pointed to has been overflowed!
+
+          0
+               0
+                                                                                                                                                                                                                                               0
+warning! The value %n argument pointed to has been overflowed!
+
+Overflow success
+Backtrace success
+leaving test_backtrace 0
+leaving test_backtrace 1
+leaving test_backtrace 2
+leaving test_backtrace 3
+leaving test_backtrace 4
+leaving test_backtrace 5
+Welcome to the JOS kernel monitor!
+Type 'help' for a list of commands.
+qemu: terminating on signal 15 from pid 47255
